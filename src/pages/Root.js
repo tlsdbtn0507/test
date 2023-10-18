@@ -4,7 +4,6 @@ import Navigation from "../components/navigation";
 const Root = () => {
   return (
     <>
-      asdfasf
       <Navigation />
       <Outlet />
     </>

@@ -1,13 +1,17 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import css from "../css/navi.module.css";
 
 const Navigation = () => {
   const PAGES = [1, 2, 3];
 
   return (
-    <nav>
-      {/* <Link to={}></Link> */}
+    <nav className={css.navi}>
       {PAGES.map((e) => (
-        <Link to={`/${e}`}>e</Link>
+        <ul>
+          <span>
+            <NavLink to={`/${e}`}> to {e} page</NavLink>
+          </span>
+        </ul>
       ))}
     </nav>
   );

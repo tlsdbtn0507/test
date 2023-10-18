@@ -1,4 +1,5 @@
 .div {
   width: auto;
+  margin: auto;
   border: 1px solid black;
 }
