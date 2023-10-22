@@ -7,10 +7,7 @@ const Total = () => {
   const pageIndex = id === undefined ? 1 : id;
 
   const count = useSelector((state) => state[pageIndex - 1].value);
-  //   const total = useSelector((state) => state);
 
-  //   console.log(total.reduce((a, b) => a.value + b.value, 0));
-  //   console.log(total);
   return (
     <>
       <h1>TotalCount:{}</h1>
