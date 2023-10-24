@@ -5,14 +5,13 @@ const Toggler = () => {
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCount((prev) => prev + 1);
-      console.log("asdf");
+      setCount(count + 1);
 
       return () => {
         clearInterval(timer);
       };
     }, 1000);
-  }, [count]);
+  });
 
   return <div>showToggling : {count}</div>;
 };
