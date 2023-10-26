@@ -15,6 +15,8 @@ const Content = ({ num }) => {
     dispatch(counterActoins.increment(id === undefined ? 0 : id - 1));
   };
 
+
+  
   return (
     <div className={css.div}>
       <h1> content{num} </h1>
