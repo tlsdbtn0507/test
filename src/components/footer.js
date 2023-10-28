@@ -16,6 +16,7 @@ const Footer = () => {
       >
         show toggle
       </button>
+      
     </div>
   );
 };

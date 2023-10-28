@@ -14,6 +14,7 @@ const Total = () => {
       <h2>
         Count of CurrentPage{`(${pageIndex})`} : {count}
       </h2>
+
     </>
   );
 };
