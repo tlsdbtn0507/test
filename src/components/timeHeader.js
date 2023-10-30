@@ -4,9 +4,14 @@ const TimeHeader = () => {
 
     return(
         <div className={css.div}>
-            <h2 >Goal</h2>
-            <button >+</button>
-        </div>
+            <div className={css.goalDiv}>
+                <h2 >Goal</h2>
+                <button className={css.btn} >+</button>
+            </div>
+            <div>
+                <p className={css.alertCell}>alert 칸</p>
+            </div>
+        </div >
     )
 }
 

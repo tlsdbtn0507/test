@@ -5,3 +5,9 @@
   border: 1px solid black;
   text-align: center;
 }
+.goorm{
+  width: 50%;
+  margin: auto;
+  border: 0.5px solid gray;
+  padding: 10px
+}

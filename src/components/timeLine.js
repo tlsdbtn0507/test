@@ -30,29 +30,32 @@ const TimeLine =()=>{
     const datesDiff = getDateDiff(end,start);
     const datesDiifToday = Math.trunc(getDateDiff(toDay,start))
 
-    console.log(datesDiifToday,toDay,start)
 
     const dateCells = []
 
     for (let i = 0; i < datesDiff; i++) {
-        dateCells.push(<td key={i} className={css['dates-td']}>{i===datesDiifToday ? '|': ""}</td>)
+        dateCells.push(
+        <td key={i} className={css['dates-td']}>{i===datesDiifToday ? '|': ""}</td>
+        )
     }
+
+    const goalCells = []
 
     return(
         <>
             <TimeHeader/>
-        <table>
-          <tbody>
-            <span className={css.start}>{startString}</span>
-            <span className={css.end}>{endString}</span>
-            <tr className={css.dates}>
-                {dateCells.map(e=>e)}
-            </tr>
-            <tr className={css.cells}>
-                
-            </tr>
-            </tbody>  
-        </table>
+                <span className={css.start}>{startString}</span>
+                <span className={css.end}>{endString}</span>
+            <table>
+              <tbody>
+                <tr className={css.dates}>
+                    {dateCells.map(e=>e)}
+                </tr>
+                <tr className={css.cells}>
+                    <td> todo</td>
+                </tr>
+                </tbody>  
+            </table>
         </>
     )
 }
