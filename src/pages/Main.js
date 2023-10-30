@@ -1,7 +1,7 @@
 import "../css/App.css";
 import Content from "../components/content";
 import Total from "../components/total";
-import TimeLine from "../components/timeLine";
+import TimeLine from "../components/goorm/timeLine";
 
 const Main = () => {
   const contents = [1, 2, 3];
