@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { counterActoins } from "../store/counterSlice";
 
 const Navigation = () => {
-  const pages = useSelector((s) => s);
+  const pages = useSelector((s) => s.counterReducer);
 
   const dispatch = useDispatch();
 

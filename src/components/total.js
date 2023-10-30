@@ -6,7 +6,7 @@ const Total = () => {
 
   const pageIndex = id === undefined ? 1 : id;
 
-  const count = useSelector((state) => state[pageIndex - 1].value);
+  const count = useSelector((state) => state.counterReducer[pageIndex - 1].value);
 
   return (
     <>
