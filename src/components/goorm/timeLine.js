@@ -13,7 +13,7 @@ const TimeLine =(axiosGoals)=>{
 
     const dateCells = [];
 
-    const goalCellsLength = useSelector(state => state.goal.goals);
+    // const goalCellsLength = useSelector(state => state.goal.goals);
 
     for (let i = 0; i < dates.datesDiff; i++) {
         dateCells.push(
@@ -33,6 +33,7 @@ const TimeLine =(axiosGoals)=>{
     //    }
     // },[goalCellsLength])
 
+
     return(
         <>
             <TimeHeader addGoals={addGoals}/>
@@ -42,11 +43,6 @@ const TimeLine =(axiosGoals)=>{
                 <tr className={css.dates}>
                     {dateCells.map(e=>e)}
                 </tr>
-                {goals.map((e,ind)=>{
-                    <tr key={ind} className={css.cells}>
-                        <td>{e}</td>
-                    </tr>
-                })}
                 {goals}
                 </tbody>  
             </table>

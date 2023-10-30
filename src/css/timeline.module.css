@@ -20,8 +20,14 @@ table{
 }
 
 .cells{
-    height: 20px;
+    height: inherit;
     display: flex;
     justify-content: space-between;
     margin-bottom: 10px;
+}
+.span{
+    background-color: #9393A0;
+    border-radius: 15px;
+    resize: horizontal;
+    padding: 8px;
 }

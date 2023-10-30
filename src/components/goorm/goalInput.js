@@ -1,14 +1,28 @@
-import { useSearchParams } from 'react-router-dom'
 import css from '../../css/timeline.module.css'
-import { useSelector } from 'react-redux'
+import { useState } from 'react'
+
 
 const GoalInput = () => {
-    const goalIndex = useSelector(s => s.goal.goals)
+
+    const [goal,setGoals] = useState(null);
+    const [showGoal, setShowGoal] = useState(false)
+    
+    const submitGoalName = e => {
+        e.preventDefault();
+        const {value} = e.target[0]
+        setGoals(value);
+        setShowGoal(!showGoal)
+    }
     
     return(
-        <tr key={goalIndex} className={css.cells}>
+        <tr className={css.cells}>
             <td>
-                <input></input>
+                { showGoal ? 
+                <div className={css.span} style={{opacity:1}}>{goal}</div> : 
+                <form  onSubmit={submitGoalName}>
+                    <input type='text'/>
+                </form>
+                }
             </td>
         </tr>
     )

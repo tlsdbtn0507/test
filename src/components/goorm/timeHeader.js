@@ -2,19 +2,16 @@ import { useDispatch, useSelector } from 'react-redux'
 import css from '../../css/timeHeader.module.css'
 import { goalActions } from '../../store/goalSlice'
 import GoalInput from './goalInput'
+// import {  } from 'react-redux'
 
 const TimeHeader = (props) => {
-
+    const goalIndex = useSelector(s => s.goal.goals)
+    
     const dispatch = useDispatch()
 
     const addGoalHandler = () => {
         dispatch(goalActions.addGoal());
-        // props.addGoals(prev=>prev.push(
-        //     <tr className={css.cells}>
-        //     <td>a</td>
-        // </tr>
-        // ))
-        props.addGoals(<GoalInput/>)
+        props.addGoals(<GoalInput key={goalIndex}/>)
     }
 
     return(
