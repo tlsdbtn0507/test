@@ -2,7 +2,6 @@ import { useDispatch, useSelector } from 'react-redux'
 import css from '../../css/timeHeader.module.css'
 import { goalActions } from '../../store/goalSlice'
 import GoalInput from './goalInput'
-// import {  } from 'react-redux'
 
 const TimeHeader = (props) => {
     const goalIndex = useSelector(s => s.goal.goals)
@@ -21,7 +20,7 @@ const TimeHeader = (props) => {
                 <button className={css.btn} onClick={addGoalHandler} >+</button>
             </div>
             <div>
-                <p className={css.alertCell}>alert 칸</p>
+                <p className={css.alertCell}>❗️ alert 칸</p>
             </div>
         </div >
     )
